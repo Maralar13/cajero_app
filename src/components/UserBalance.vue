@@ -18,7 +18,7 @@ balance: 0
 created: function(){
 this.username = this.$route.params.username
 let self = this
-axios.get("https://cajero-api15.herokuapp.com/" + this.username)
+axios.get("https://cajero-api15.herokuapp.com/user/balance" + this.username)
 .then((result) => {
 self.balance = result.data.balance
 })
